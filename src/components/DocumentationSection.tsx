@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import { BookOpen, Zap, Shield, Users, Code, FileText, ChevronRight, ExternalLink } from 'lucide-react';
 
-const DocumentationSection: React.FC = () => {
+interface DocumentationSectionProps {
+  onSectionChange?: (section: string) => void;
+}
+
+const DocumentationSection: React.FC<DocumentationSectionProps> = ({ onSectionChange }) => {
   const [activeSection, setActiveSection] = useState('overview');
 
   const sections = [
@@ -868,13 +872,13 @@ const DocumentationSection: React.FC = () => {
               <ExternalLink size={16} />
               JOIN DISCORD
             </a>
-            <a
-              href="#whitepaper"
+            <button
+              onClick={() => onSectionChange?.('whitepaper')}
               className="border border-gray-700 text-white px-8 py-4 font-mono text-sm hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center gap-2 min-w-[140px]"
             >
               <FileText size={16} />
               VIEW WHITEPAPER
-            </a>
+            </button>
           </div>
         </div>
       </div>

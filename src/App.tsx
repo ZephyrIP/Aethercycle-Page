@@ -19,7 +19,7 @@ function App() {
       case 'home':
         return <HeroSection onSectionChange={setActiveSection} />;
       case 'docs':
-        return <DocumentationSection />;
+        return <DocumentationSection onSectionChange={setActiveSection} />;
       case 'tokenomics':
         return <TokenEconomicsSection />;
       case 'prelaunch':
