@@ -28,45 +28,45 @@ const PreLaunchSection: React.FC<PreLaunchSectionProps> = ({ onSectionChange }) 
       id: 'community',
       title: 'Community Building',
       status: 'active',
-      timeline: 'Q4 2024 - Q1 2025',
-      description: 'Building the foundational community and gathering early supporters',
+      timeline: 'Q2 2025 - Q3 2025',
+      description: 'Building foundational community, education, and gathering early supporters while transitioning from private to public',
       icon: Users,
       color: 'text-blue-400',
       bgColor: 'bg-blue-900/20',
       borderColor: 'border-blue-700',
       details: [
-        'Private Discord community establishment',
+        'Transitioning from private to public community',
         'Core contributor recruitment and vetting',
-        'Community governance framework testing',
         'Educational content creation and distribution',
-        'Early feedback collection and protocol refinement'
+        'Community governance framework preparation',
+        'Public awareness and early supporter onboarding'
       ],
-      currentStatus: 'Private community active with 150+ verified members'
+      currentStatus: 'Currently going public after internal development phase, focusing on community education and growth'
     },
     {
       id: 'repository',
-      title: 'Code Repository & Testing',
+      title: 'Internal Testing & Development',
       status: 'active',
-      timeline: 'Q1 2025',
-      description: 'Private development and internal testing phase',
+      timeline: 'Q2 2025 - Q3 2025',
+      description: 'Intensive internal testing, concept refinement, and private development completion',
       icon: Github,
       color: 'text-green-400',
       bgColor: 'bg-green-900/20',
       borderColor: 'border-green-700',
       details: [
-        'Smart contract development completion',
-        'Private repository with core team access',
-        'Internal testing and bug identification',
-        'Gas optimization and efficiency improvements',
-        'Mathematical model validation and stress testing'
+        'Smart contract development and refinement',
+        'Intensive internal testing and concept validation',
+        'Private repository development with core team',
+        'Bug identification and resolution',
+        'Gas optimization and mathematical model validation'
       ],
-      currentStatus: 'All core contracts developed, internal testing in progress'
+      currentStatus: 'Active internal testing phase, preparing for public testnet deployment'
     },
     {
       id: 'testnet',
       title: 'Public Testnet',
       status: 'upcoming',
-      timeline: 'Q2 2025',
+      timeline: 'Q3 2025 - Q4 2025',
       description: 'Public testing phase with community participation',
       icon: Zap,
       color: 'text-yellow-400',
@@ -75,36 +75,36 @@ const PreLaunchSection: React.FC<PreLaunchSectionProps> = ({ onSectionChange }) 
       details: [
         'Public testnet deployment on Base Sepolia',
         'Community testing and feedback collection',
-        'Bug bounty program activation',
+        'Bug bounty program launch',
         'User interface and experience refinement',
         'Documentation completion and review'
       ],
-      currentStatus: 'Preparing for public testnet launch'
+      currentStatus: 'Scheduled after internal testing completion'
     },
     {
       id: 'audit',
-      title: 'Security Audit',
+      title: 'Security Audit & Bug Bounty',
       status: 'upcoming',
-      timeline: 'Q3 2025',
-      description: 'Internal security audit and vulnerability assessment',
+      timeline: 'Q4 2025',
+      description: 'Comprehensive security audit and community bug bounty program',
       icon: Shield,
       color: 'text-purple-400',
       bgColor: 'bg-purple-900/20',
       borderColor: 'border-purple-700',
       details: [
-        'Internal security audit by core team',
+        'Professional third-party security audit',
+        'Community bug bounty program activation',
         'Vulnerability assessment and penetration testing',
-        'Code review and optimization recommendations',
-        'Security improvements implementation',
-        'Audit report preparation and transparency'
+        'Security improvements and optimization implementation',
+        'Public audit report and transparency documentation'
       ],
-      currentStatus: 'Internal audit team preparation in progress'
+      currentStatus: 'Scheduled after successful public testnet phase'
     },
     {
       id: 'fairlaunch',
       title: 'Fair Launch',
       status: 'upcoming',
-      timeline: 'February 2026',
+      timeline: 'Q1 2026',
       description: 'Public fair launch and protocol activation',
       icon: Target,
       color: 'text-red-400',
@@ -117,7 +117,7 @@ const PreLaunchSection: React.FC<PreLaunchSectionProps> = ({ onSectionChange }) 
         'Protocol activation and autonomous operation begins',
         'Community governance transition to full autonomy'
       ],
-      currentStatus: 'Scheduled for February 2026 after all prerequisites complete'
+      currentStatus: 'Scheduled after successful audit and security validation'
     }
   ];
 
