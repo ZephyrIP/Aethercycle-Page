@@ -119,7 +119,7 @@ const FAQSection: React.FC = () => {
         },
         {
           question: "Are there other staking opportunities?",
-          answer: "NFT staking available. Aetheria NFT collection (max 500 pieces) can be staked for 5% of protocol revenue. NFTs minted using AEC tokens, proceeds go to PerpetualEngine. Different rarity traits provide different staking multipliers. Limited supply creates scarcity value beyond utility."
+          answer: "NFT staking is available. The Aetheria NFT collection, limited to 500 pieces, can be staked to earn a share of 5% of all protocol revenue. All NFTs hold the same weight.\n\nNFTs are minted using AEC tokens, and 100% of the proceeds are sent directly to the Perpetual Engine to strengthen the entire ecosystem. This creates scarcity value beyond its direct utility."
         },
         {
           question: "Can I use AEC for anything besides staking?",
