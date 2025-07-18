@@ -7,7 +7,7 @@ const CommunitySection: React.FC = () => {
       name: 'Discord',
       description: 'Real-time discussions and community support',
       icon: MessageSquare,
-      url: 'https://discord.gg/wadaks9KPt'
+      url: 'https://discord.gg/2mfvNvWYq7'
     },
     {
       name: 'Twitter',
@@ -71,19 +71,6 @@ const CommunitySection: React.FC = () => {
               <h4 className="font-mono text-sm font-medium mb-2">Autonomous Operation</h4>
               <p className="text-xs text-gray-400">
                 Support systems that operate without human intervention.
-              </p>
-            </div>
-          </div>
-          
-          <div className="mt-8 text-center">
-            <h4 className="font-mono text-sm font-medium mb-2">Code Repository Status</h4>
-            <div className="bg-gray-800 p-4 rounded-lg">
-              <p className="text-xs text-gray-400 mb-2">
-                Due to increasing number of forks in the DeFi space, we've chosen to keep the contract repositories private until official launch. 
-                This is to protect the architecture integrity of AetherCycle — the first truly autonomous DeFi protocol.
-              </p>
-              <p className="text-xs text-yellow-400">
-                Code will be made public and verified upon mainnet deployment.
               </p>
             </div>
           </div>
