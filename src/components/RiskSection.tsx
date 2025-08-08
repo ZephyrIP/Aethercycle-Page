@@ -1,5 +1,6 @@
 import React from 'react';
 import { AlertTriangle, Shield, Info, CheckCircle } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 const RiskSection: React.FC = () => {
   const riskCategories = [
@@ -63,7 +64,14 @@ const RiskSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-black text-white">
+    <>
+      <SEOHead
+        title="Risk Assessment - Protocol Risk Analysis"
+        description="Comprehensive risk analysis for the AEC protocol. Understand the risks before participating in the ecosystem. Smart contract, market, and operational risks."
+        canonicalUrl="/risk-assessment"
+        keywords="risk assessment, DeFi risks, smart contract risks, protocol risks, investment risks, AEC risks"
+      />
+      <section className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">RISK ASSESSMENT</h2>
@@ -146,6 +154,7 @@ const RiskSection: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

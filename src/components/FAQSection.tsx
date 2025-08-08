@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, AlertTriangle, ExternalLink, FileText } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 const FAQSection: React.FC = () => {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
@@ -172,7 +173,14 @@ const FAQSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-black text-white">
+    <>
+      <SEOHead
+        title="FAQ - Frequently Asked Questions"
+        description="Direct answers about AEC's philosophy, mechanics, and mathematical guarantees. Get answers to common questions about the autonomous DeFi protocol."
+        canonicalUrl="/faq"
+        keywords="AEC FAQ, frequently asked questions, DeFi questions, autonomous finance FAQ, protocol questions"
+      />
+      <section className="py-24 bg-black text-white">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">FREQUENTLY ASKED QUESTIONS</h2>
@@ -288,6 +296,7 @@ const FAQSection: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
