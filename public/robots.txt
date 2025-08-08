@@ -1,10 +1,13 @@
 User-agent: *
 Allow: /
 
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
 # Sitemap
 Sitemap: https://aethercycle.xyz/sitemap.xml
 
-# Specific pages
+# Important pages for crawling
 Allow: /documentation
 Allow: /tokenomics
 Allow: /path-to-genesis
@@ -13,6 +16,12 @@ Allow: /whitepaper
 Allow: /community
 Allow: /risk-assessment
 Allow: /legal
+Allow: /docs
+Allow: /faq
+Allow: /prelaunch
+Allow: /privacy
+Allow: /risk
+Allow: /token-economics
 
 # Disallow admin or sensitive areas (if any in future)
 # Disallow: /admin
