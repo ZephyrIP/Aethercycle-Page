@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Zap, Shield, Users, Code, FileText, ChevronRight, ExternalLink } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 interface DocumentationSectionProps {
   onSectionChange?: (section: string) => void;
@@ -819,7 +820,14 @@ const DocumentationSection: React.FC<DocumentationSectionProps> = ({ onSectionCh
   );
 
   return (
-    <section className="py-24 bg-black text-white">
+    <>
+      <SEOHead
+        title="Documentation - AEC Protocol Guide"
+        description="Comprehensive guides and technical documentation for the AEC protocol. Everything you need to understand and participate in autonomous DeFi."
+        canonicalUrl="/documentation"
+        keywords="AEC documentation, DeFi guide, protocol documentation, autonomous finance, technical specs"
+      />
+      <section className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">DOCUMENTATION</h2>
@@ -883,6 +891,7 @@ const DocumentationSection: React.FC<DocumentationSectionProps> = ({ onSectionCh
         </div>
       </div>
     </section>
+    </>
   );
 };
 

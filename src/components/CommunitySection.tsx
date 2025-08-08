@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageSquare, Github, Twitter, ExternalLink } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 const CommunitySection: React.FC = () => {
   const communityChannels = [
@@ -24,7 +25,14 @@ const CommunitySection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-black text-white">
+    <>
+      <SEOHead
+        title="Community - Join the AEC Ecosystem"
+        description="Join the AEC community. Participate in governance and help shape the future of autonomous DeFi. Connect via Discord, Twitter, and GitHub."
+        canonicalUrl="/community"
+        keywords="AEC community, DeFi community, Discord, Twitter, GitHub, governance, autonomous finance"
+      />
+      <section className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">COMMUNITY</h2>
@@ -77,6 +85,7 @@ const CommunitySection: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

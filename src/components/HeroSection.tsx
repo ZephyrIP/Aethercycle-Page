@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 interface HeroSectionProps {
   onSectionChange: (section: string) => void;
@@ -7,7 +8,14 @@ interface HeroSectionProps {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ onSectionChange }) => {
   return (
-    <section className="min-h-screen flex items-center justify-center bg-black text-white">
+    <>
+      <SEOHead
+        title="AEC AetherCycle - Autonomous DeFi Protocol"
+        description="Self-sustaining DeFi protocol with mathematical sustainability guarantees. No roadmap, no promises, just mathematics. 888M fixed supply, 1% founder allocation."
+        canonicalUrl="/"
+        keywords="AEC, AetherCycle, autonomous DeFi, mathematical sustainability, Base network, cryptocurrency, decentralized finance"
+      />
+      <section className="min-h-screen flex items-center justify-center bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="space-y-12">
           {/* Logo and Brand */}
@@ -79,6 +87,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSectionChange }) => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

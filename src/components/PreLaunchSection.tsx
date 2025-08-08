@@ -15,6 +15,7 @@ import {
   FileText,
   Github
 } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 interface PreLaunchSectionProps {
   onSectionChange: (section: string) => void;
@@ -144,7 +145,14 @@ const PreLaunchSection: React.FC<PreLaunchSectionProps> = ({ onSectionChange }) 
   };
 
   return (
-    <section className="py-24 bg-black text-white">
+    <>
+      <SEOHead
+        title="Path to Genesis - Deployment Timeline"
+        description="The necessary steps to deploy a complete, autonomous protocol. These are not promises of future features—they are prerequisites for launching a fully functional system."
+        canonicalUrl="/path-to-genesis"
+        keywords="path to genesis, deployment timeline, protocol launch, AEC roadmap, autonomous deployment"
+      />
+      <section className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">PATH TO GENESIS</h2>
@@ -375,6 +383,7 @@ const PreLaunchSection: React.FC<PreLaunchSectionProps> = ({ onSectionChange }) 
         </div>
       </div>
     </section>
+    </>
   );
 };
 

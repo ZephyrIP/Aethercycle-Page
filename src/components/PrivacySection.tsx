@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Eye, Lock, Users, AlertTriangle, FileText, Scale, Info } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 const PrivacySection: React.FC = () => {
   const currentDate = new Date().toLocaleDateString('en-US', { 
@@ -9,7 +10,14 @@ const PrivacySection: React.FC = () => {
   });
 
   return (
-    <section className="py-24 bg-black text-white">
+    <>
+      <SEOHead
+        title="Legal Documentation - Privacy & Terms"
+        description="Comprehensive legal notices, privacy policy, and risk disclosures for the AEC protocol. Important legal information for participants."
+        canonicalUrl="/legal"
+        keywords="privacy policy, terms of service, legal documentation, disclaimer, AEC legal, DeFi legal"
+      />
+      <section className="py-24 bg-black text-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">LEGAL DOCUMENTATION</h2>
@@ -261,6 +269,7 @@ const PrivacySection: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

@@ -16,6 +16,7 @@ import {
   AlertTriangle,
   CheckCircle
 } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 const TokenEconomicsSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState('overview');
@@ -668,7 +669,14 @@ const TokenEconomicsSection: React.FC = () => {
   );
 
   return (
-    <section className="py-24 bg-black text-white">
+    <>
+      <SEOHead
+        title="Token Economics - Mathematical Model"
+        description="Comprehensive mathematical analysis of AetherCycle's autonomous economic system. Mathematical sustainability guarantees through rigorous economic modeling."
+        canonicalUrl="/tokenomics"
+        keywords="tokenomics, token economics, mathematical model, DeFi economics, AEC token, sustainability"
+      />
+      <section className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">TOKEN ECONOMICS</h2>
@@ -737,6 +745,7 @@ const TokenEconomicsSection: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

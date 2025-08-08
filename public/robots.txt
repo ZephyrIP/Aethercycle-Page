@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://aethercycle.xyz/sitemap.xml
+
+# Specific pages
+Allow: /documentation
+Allow: /tokenomics
+Allow: /path-to-genesis
+Allow: /faq
+Allow: /whitepaper
+Allow: /community
+Allow: /risk-assessment
+Allow: /legal
+
+# Disallow admin or sensitive areas (if any in future)
+# Disallow: /admin

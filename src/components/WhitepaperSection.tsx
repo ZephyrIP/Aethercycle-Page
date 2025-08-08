@@ -1,6 +1,7 @@
 import React from 'react';
 import WhitepaperViewer from './WhitepaperViewer';
 import { FileText, Download, ExternalLink, BookOpen } from 'lucide-react';
+import SEOHead from './SEOHead';
 
 const WhitepaperSection: React.FC = () => {
   const [showViewer, setShowViewer] = React.useState(false);
@@ -71,7 +72,14 @@ const WhitepaperSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-black text-white">
+    <>
+      <SEOHead
+        title="Whitepaper & Technical Documentation"
+        description="Comprehensive documentation covering the AEC protocol architecture, mathematical models, and implementation details. Download the complete whitepaper."
+        canonicalUrl="/whitepaper"
+        keywords="AEC whitepaper, technical documentation, protocol architecture, mathematical proofs, smart contracts"
+      />
+      <section className="py-24 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <div className="flex justify-center items-center mb-6">
@@ -224,6 +232,7 @@ const WhitepaperSection: React.FC = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

@@ -1,0 +1,10 @@
+# Netlify redirects for SPA routing
+/*    /index.html   200
+
+# SEO-friendly redirects
+/about              /documentation    301
+/docs               /documentation    301
+/token-economics    /tokenomics       301
+/prelaunch          /path-to-genesis  301
+/privacy            /legal            301
+/risk               /risk-assessment  301
