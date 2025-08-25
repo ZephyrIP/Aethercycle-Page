@@ -117,80 +117,80 @@ const TokenEconomicsSection: React.FC = () => {
   const renderOverview = () => (
     <div className="space-y-8">
       {/* Logo and Title */}
-      <div className="text-center mb-8">
+      <div className="text-center mb-12">
         <img 
           src="/Aethercycle_AEC_Logo.png" 
           alt="AetherCycle Logo" 
-          className="w-16 h-16 mx-auto mb-4 opacity-80"
+          className="w-20 h-20 mx-auto mb-6 opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
         />
       </div>
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div className="bg-gray-800 p-6 rounded-lg text-center">
-          <div className="text-3xl font-bold mb-2">888M</div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-8 rounded-2xl text-center hover:bg-white/15 transition-all duration-300 hover:scale-105 group">
+          <div className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform">888M</div>
           <div className="text-sm text-gray-400">Fixed Supply</div>
         </div>
-        <div className="bg-gray-800 p-6 rounded-lg text-center">
-          <div className="text-3xl font-bold mb-2 text-green-400">99%</div>
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-8 rounded-2xl text-center hover:bg-white/15 transition-all duration-300 hover:scale-105 group">
+          <div className="text-4xl font-bold mb-3 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform">99%</div>
           <div className="text-sm text-gray-400">Community Controlled</div>
         </div>
-        <div className="bg-gray-800 p-6 rounded-lg text-center">
-          <div className="text-3xl font-bold mb-2 text-blue-400">35%</div>
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-8 rounded-2xl text-center hover:bg-white/15 transition-all duration-300 hover:scale-105 group">
+          <div className="text-4xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform">35%</div>
           <div className="text-sm text-gray-400">Perpetual Endowment</div>
         </div>
-        <div className="bg-gray-800 p-6 rounded-lg text-center">
-          <div className="text-3xl font-bold mb-2 text-red-400">1%</div>
+        <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-8 rounded-2xl text-center hover:bg-white/15 transition-all duration-300 hover:scale-105 group">
+          <div className="text-4xl font-bold mb-3 bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent group-hover:scale-110 transition-transform">1%</div>
           <div className="text-sm text-gray-400">Founder Allocation</div>
         </div>
       </div>
 
       {/* Mathematical Guarantees */}
-      <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-700 p-8 rounded-lg">
+      <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 backdrop-blur-sm border border-blue-500/30 p-10 rounded-3xl shadow-2xl">
         <div className="flex items-center mb-6">
-          <Calculator className="mr-3 text-blue-400" size={24} />
-          <h3 className="text-2xl font-bold">Mathematical Guarantees</h3>
+          <Calculator className="mr-4 text-blue-400" size={28} />
+          <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Mathematical Guarantees</h3>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="text-center">
-            <CheckCircle className="mx-auto mb-3 text-green-400" size={32} />
-            <h4 className="font-bold mb-2">Infinite Operation</h4>
-            <p className="text-sm text-gray-300">Mathematical endowment ensures perpetual funding</p>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center group">
+            <CheckCircle className="mx-auto mb-4 text-green-400 group-hover:scale-110 transition-transform" size={40} />
+            <h4 className="font-bold mb-3 text-lg">Infinite Operation</h4>
+            <p className="text-gray-300">Mathematical endowment ensures perpetual funding</p>
           </div>
-          <div className="text-center">
-            <Shield className="mx-auto mb-3 text-blue-400" size={32} />
-            <h4 className="font-bold mb-2">Zero Extraction</h4>
-            <p className="text-sm text-gray-300">100% of revenue flows back to community</p>
+          <div className="text-center group">
+            <Shield className="mx-auto mb-4 text-blue-400 group-hover:scale-110 transition-transform" size={40} />
+            <h4 className="font-bold mb-3 text-lg">Zero Extraction</h4>
+            <p className="text-gray-300">100% of revenue flows back to community</p>
           </div>
-          <div className="text-center">
-            <TrendingUp className="mx-auto mb-3 text-purple-400" size={32} />
-            <h4 className="font-bold mb-2">Deflationary Pressure</h4>
-            <p className="text-sm text-gray-300">Continuous supply reduction mechanisms</p>
+          <div className="text-center group">
+            <TrendingUp className="mx-auto mb-4 text-purple-400 group-hover:scale-110 transition-transform" size={40} />
+            <h4 className="font-bold mb-3 text-lg">Deflationary Pressure</h4>
+            <p className="text-gray-300">Continuous supply reduction mechanisms</p>
           </div>
         </div>
       </div>
 
       {/* Revenue Distribution */}
-      <div className="bg-gray-800 p-8 rounded-lg">
-        <h3 className="text-xl font-bold mb-6 flex items-center">
-          <PieChart className="mr-3" size={20} />
+      <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 p-10 rounded-3xl">
+        <h3 className="text-2xl font-bold mb-8 flex items-center justify-center">
+          <PieChart className="mr-4" size={28} />
           Automated Revenue Distribution
         </h3>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="text-center p-6 bg-red-900/20 border border-red-700 rounded-lg">
-            <div className="text-3xl font-bold text-red-400 mb-2">20%</div>
-            <div className="font-medium mb-2">BURN</div>
-            <div className="text-sm text-gray-400">Permanent supply reduction</div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="text-center p-8 bg-gradient-to-br from-red-900/30 to-red-800/20 border border-red-500/30 rounded-2xl hover:scale-105 transition-all duration-300 group">
+            <div className="text-5xl font-bold bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform">20%</div>
+            <div className="font-bold mb-3 text-lg">BURN</div>
+            <div className="text-gray-400">Permanent supply reduction</div>
           </div>
-          <div className="text-center p-6 bg-blue-900/20 border border-blue-700 rounded-lg">
-            <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
-            <div className="font-medium mb-2">LIQUIDITY</div>
-            <div className="text-sm text-gray-400">Automated LP provision</div>
+          <div className="text-center p-8 bg-gradient-to-br from-blue-900/30 to-blue-800/20 border border-blue-500/30 rounded-2xl hover:scale-105 transition-all duration-300 group">
+            <div className="text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform">40%</div>
+            <div className="font-bold mb-3 text-lg">LIQUIDITY</div>
+            <div className="text-gray-400">Automated LP provision</div>
           </div>
-          <div className="text-center p-6 bg-green-900/20 border border-green-700 rounded-lg">
-            <div className="text-3xl font-bold text-green-400 mb-2">40%</div>
-            <div className="font-medium mb-2">REWARDS</div>
-            <div className="text-sm text-gray-400">Staking incentives</div>
+          <div className="text-center p-8 bg-gradient-to-br from-green-900/30 to-green-800/20 border border-green-500/30 rounded-2xl hover:scale-105 transition-all duration-300 group">
+            <div className="text-5xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform">40%</div>
+            <div className="font-bold mb-3 text-lg">REWARDS</div>
+            <div className="text-gray-400">Staking incentives</div>
           </div>
         </div>
       </div>
@@ -676,12 +676,17 @@ const TokenEconomicsSection: React.FC = () => {
         canonicalUrl="/tokenomics"
         keywords="tokenomics, token economics, mathematical model, DeFi economics, AEC token, sustainability"
       />
-      <section className="py-24 bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-transparent to-transparent"></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+        
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">TOKEN ECONOMICS</h2>
-          <h3 className="text-2xl md:text-3xl font-medium mb-4 text-blue-400">Mathematical Model Explained</h3>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">TOKEN ECONOMICS</h2>
+          <h3 className="text-3xl md:text-4xl font-medium mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Mathematical Model Explained</h3>
+          <p className="text-xl md:text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed">
             Comprehensive mathematical analysis of AetherCycle's autonomous economic system.
             Mathematical sustainability guarantees through rigorous economic modeling.
           </p>
@@ -689,18 +694,18 @@ const TokenEconomicsSection: React.FC = () => {
 
         {/* Navigation Tabs */}
         <div className="mb-12">
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center px-4 py-2 rounded-lg font-medium text-sm transition-colors ${
+                className={`flex items-center px-6 py-3 rounded-xl font-medium text-sm transition-all duration-300 backdrop-blur-sm ${
                   activeTab === tab.id
-                    ? 'bg-white text-black'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                    ? 'bg-gradient-to-r from-white to-gray-200 text-black shadow-lg scale-105'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20 hover:border-white/40 hover:scale-105'
                 }`}
               >
-                <tab.icon size={16} className="mr-2" />
+                <tab.icon size={18} className="mr-3" />
                 {tab.label}
               </button>
             ))}
@@ -718,25 +723,25 @@ const TokenEconomicsSection: React.FC = () => {
         </div>
 
         {/* Mathematical Conclusion */}
-        <div className="mt-16 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-700 p-8 rounded-lg">
+        <div className="mt-16 bg-gradient-to-r from-blue-900/30 to-purple-900/30 backdrop-blur-sm border border-blue-500/30 p-12 rounded-3xl shadow-2xl">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-6">Mathematical Certainty</h3>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-6">
+            <h3 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Mathematical Certainty</h3>
+            <p className="text-xl text-gray-300 max-w-5xl mx-auto mb-8 leading-relaxed">
               AetherCycle's token economics represent a paradigm shift from speculative to mathematical DeFi. 
               Through rigorous mathematical modeling, the protocol ensures guaranteed baseline operation, 
               revenue diversification, automatic value accrual, and sustainable growth.
             </p>
-            <div className="text-xl font-bold text-blue-400">
+            <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
               This is not speculation – this is mathematical certainty.
             </div>
           </div>
         </div>
 
         {/* Disclaimer */}
-        <div className="mt-8 p-6 border border-gray-700 bg-gray-900 rounded-lg">
+        <div className="mt-8 p-8 border border-yellow-500/30 bg-gradient-to-r from-yellow-900/20 to-orange-900/20 backdrop-blur-sm rounded-2xl">
           <div className="flex items-start">
-            <AlertTriangle className="mr-3 text-yellow-400 mt-1 flex-shrink-0" size={20} />
-            <div className="text-sm text-gray-400">
+            <AlertTriangle className="mr-4 text-yellow-400 mt-1 flex-shrink-0" size={24} />
+            <div className="text-sm text-gray-300">
               <strong className="text-yellow-400">Disclaimer:</strong> Economic projections based on mathematical models and assumptions. 
               Actual results may vary based on market conditions, adoption rates, and external factors. Token values may fluctuate dramatically. 
               This analysis is for educational purposes and does not constitute financial advice.

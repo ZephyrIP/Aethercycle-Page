@@ -180,32 +180,37 @@ const FAQSection: React.FC = () => {
         canonicalUrl="/faq"
         keywords="AEC FAQ, frequently asked questions, DeFi questions, autonomous finance FAQ, protocol questions"
       />
-      <section className="py-24 bg-black text-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-800/20 via-transparent to-transparent"></div>
+        <div className="absolute top-40 left-20 w-72 h-72 bg-yellow-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-40 right-20 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">FREQUENTLY ASKED QUESTIONS</h2>
-          <p className="text-xl text-gray-300">
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">FREQUENTLY ASKED QUESTIONS</h2>
+          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
             Direct answers about AEC's philosophy, mechanics, and mathematical guarantees.
           </p>
         </div>
 
         {/* Important Disclaimer */}
-        <div className="mb-12 p-6 border border-yellow-600 bg-yellow-900/20 rounded-lg">
+        <div className="mb-16 p-8 border border-yellow-500/30 bg-gradient-to-r from-yellow-900/30 to-orange-900/20 backdrop-blur-sm rounded-2xl shadow-xl">
           <div className="flex items-start">
-            <AlertTriangle className="mr-3 text-yellow-400 mt-1 flex-shrink-0" size={20} />
+            <AlertTriangle className="mr-4 text-yellow-400 mt-1 flex-shrink-0" size={24} />
             <div>
-              <h3 className="text-lg font-bold text-yellow-400 mb-3">IMPORTANT DISCLAIMER</h3>
-              <p className="text-sm text-gray-300 leading-relaxed">
+              <h3 className="text-xl font-bold text-yellow-400 mb-4">IMPORTANT DISCLAIMER</h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
                 This information is not financial advice and should not be construed as investment guidance or recommendations. 
                 AEC represents experimental financial software with inherent risks including total loss of capital. All smart contracts 
                 are immutable and cannot be upgraded post-deployment.
               </p>
-              <p className="text-sm text-gray-300 leading-relaxed mt-3">
+              <p className="text-gray-300 leading-relaxed mb-4">
                 Before participating, you must thoroughly research all risks, read our complete Disclaimer, Privacy Policy, and Terms of Service. 
                 Cryptocurrency investments are highly volatile and may not be suitable for all investors. You are solely responsible for your 
                 investment decisions and their consequences.
               </p>
-              <p className="text-sm text-gray-300 leading-relaxed mt-3">
+              <p className="text-gray-300 leading-relaxed">
                 Consult qualified financial advisors and legal counsel appropriate to your jurisdiction before making any investment decisions.
               </p>
             </div>
@@ -213,13 +218,13 @@ const FAQSection: React.FC = () => {
         </div>
 
         {/* FAQ Categories */}
-        <div className="space-y-12">
+        <div className="space-y-16">
           {faqCategories.map((category, categoryIndex) => (
-            <div key={categoryIndex} role="region" aria-labelledby={`category-${categoryIndex}`}>
-              <h3 id={`category-${categoryIndex}`} className="text-2xl font-bold mb-6 text-center border-b border-gray-700 pb-4">
+            <div key={categoryIndex} role="region" aria-labelledby={`category-${categoryIndex}`} className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8">
+              <h3 id={`category-${categoryIndex}`} className="text-3xl font-bold mb-8 text-center pb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                 {category.title}
               </h3>
-              <div className="space-y-4" role="list">
+              <div className="space-y-6" role="list">
                 {category.faqs.map((faq, faqIndex) => {
                   const globalIndex = categoryIndex * 100 + faqIndex; // Unique index for each FAQ
                   const faqId = generateId(categoryIndex, faqIndex);
@@ -229,33 +234,33 @@ const FAQSection: React.FC = () => {
                   return (
                     <div 
                       key={globalIndex} 
-                      className="border border-gray-700 bg-gray-900 rounded-lg overflow-hidden"
+                      className="border border-white/20 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/15 transition-all duration-300"
                       role="listitem"
                     >
                       <button
                         id={faqId}
-                        className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-800 transition-colors"
+                        className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-white/10 transition-all duration-300"
                         onClick={() => setOpenFAQ(openFAQ === globalIndex ? null : globalIndex)}
                         aria-expanded={isExpanded}
                         aria-controls={answerId}
                         aria-describedby={isExpanded ? answerId : undefined}
                       >
-                        <span className="font-mono text-sm font-medium pr-4">{faq.question}</span>
+                        <span className="font-mono text-base font-medium pr-6">{faq.question}</span>
                         {isExpanded ? (
-                          <ChevronUp size={20} className="text-gray-400 flex-shrink-0" aria-hidden="true" />
+                          <ChevronUp size={24} className="text-gray-400 flex-shrink-0 hover:text-white transition-colors" aria-hidden="true" />
                         ) : (
-                          <ChevronDown size={20} className="text-gray-400 flex-shrink-0" aria-hidden="true" />
+                          <ChevronDown size={24} className="text-gray-400 flex-shrink-0 hover:text-white transition-colors" aria-hidden="true" />
                         )}
                       </button>
                       
                       {isExpanded && (
                         <div 
                           id={answerId}
-                          className="px-6 pb-4 border-t border-gray-800"
+                          className="px-8 pb-6 border-t border-white/20"
                           role="region"
                           aria-labelledby={faqId}
                         >
-                          <div className="text-sm text-gray-300 leading-relaxed pt-4 whitespace-pre-line">
+                          <div className="text-gray-300 leading-relaxed pt-6 whitespace-pre-line">
                             {faq.answer}
                           </div>
                         </div>
@@ -269,29 +274,31 @@ const FAQSection: React.FC = () => {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="text-xl font-bold mb-4">Still have questions?</h3>
-          <p className="text-gray-300 mb-6">
+          <div className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
+            <p className="text-gray-300 mb-8">
             Join our community channels for real-time support and discussions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" role="group" aria-label="Community support links">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" role="group" aria-label="Community support links">
             <a
               href="https://discord.gg/wadaks9KPt"
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-gray-700 text-white px-8 py-4 font-mono text-sm hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center gap-2 min-w-[140px]"
+                className="group border border-white/30 text-white px-8 py-4 font-mono text-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center gap-2 min-w-[140px] rounded-xl backdrop-blur-sm"
               aria-label="Join Discord community for support"
             >
-              <ExternalLink size={16} aria-hidden="true" />
+                <ExternalLink size={16} aria-hidden="true" className="group-hover:scale-110 transition-transform" />
               JOIN DISCORD
             </a>
             <a
               href="#docs"
-              className="border border-gray-700 text-white px-8 py-4 font-mono text-sm hover:bg-gray-800 hover:border-gray-500 transition-all duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center gap-2 min-w-[140px]"
+                className="group border border-white/30 text-white px-8 py-4 font-mono text-sm hover:bg-white/10 hover:border-white/50 transition-all duration-300 ease-in-out transform hover:scale-105 flex items-center justify-center gap-2 min-w-[140px] rounded-xl backdrop-blur-sm"
               aria-label="View comprehensive documentation"
             >
-              <FileText size={16} aria-hidden="true" />
+                <FileText size={16} aria-hidden="true" className="group-hover:scale-110 transition-transform" />
               VIEW DOCS
             </a>
+          </div>
           </div>
         </div>
       </div>
