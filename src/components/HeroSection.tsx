@@ -63,7 +63,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onSectionChange }) => {
               <p className="text-sm text-gray-400">Mathematical endowment ensures infinite operation</p>
             </div>
           </div>
-          </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <button
